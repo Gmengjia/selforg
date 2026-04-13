@@ -6,4 +6,5 @@ def load_config(config_path):
     return config
 
 def handle_retry_error(retry_state):
-    print(f"Retry failed")
+    print(f"Retry failed after {retry_state.attempt_number} attempts.")
+    print(f"Error: {retry_state.outcome.exception()}")

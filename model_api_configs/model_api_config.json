@@ -18,5 +18,15 @@
       }
     ],
     "max_workers_per_model": 8
+  },
+  "qwen2.5-1.5b": {
+    "model_list": [
+      {
+        "model_name": "qwen2.5:1.5b",
+        "model_url": "http://localhost:11434/v1",
+        "api_key": "EMPTY"
+      }
+    ],
+    "max_workers_per_model": 2
   }
 }

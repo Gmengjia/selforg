@@ -37,8 +37,9 @@ class SelfOrg_Main(MAS):
     _GLOBAL_EMB_LOCK = threading.Lock()
     
     def __init__(self, general_config, method_config_name=None):
-        method_config_name = "config_main" if method_config_name is None else method_config_name 
+        method_config_name = "config_main" if method_config_name is None else method_config_name
         super().__init__(general_config, method_config_name)
+        self.debug = general_config.get('debug', False)
         
         # core knobs (sensible defaults)
         mc = self.method_config
